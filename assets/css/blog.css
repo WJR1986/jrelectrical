@@ -1,0 +1,13 @@
+/* For Larger Screens (desktops, large desktops) */
+@media (min-width: 992px) {
+  .blog-image {
+    max-width: 300px;
+  }
+}
+
+/* For Extra Large Screens (larger desktops) */
+@media (min-width: 1200px) {
+  .blog-image {
+    max-width: 300px;
+  }
+}
