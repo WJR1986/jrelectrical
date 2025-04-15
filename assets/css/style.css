@@ -103,7 +103,7 @@ main {
 /* Hero Section */
 .hero {
   position: relative;
-  background: url("assets/img/background.jpg") no-repeat center center;
+  background: url("../assets/img/background.jpg") no-repeat center center;
   background-size: cover;
   height: 100vh;
   padding-top: 56px; /* To account for the fixed navbar */
