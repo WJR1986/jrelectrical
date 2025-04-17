@@ -14,6 +14,12 @@ Logo Font colour 2
 #afddff
 rgb(175 221 255)
 */
+html {
+  /* always leave room for the vertical scrollbar on the right */
+  overflow-y: scroll;
+  /* reserve that gutter so centering never jumps */
+  scrollbar-gutter: stable;
+}
 
 /* Global Fonts and Colors */
 body {
@@ -23,6 +29,10 @@ body {
   display: flex; /* Add for sticky footer */
   flex-direction: column; /* Add for sticky footer */
   min-height: 100vh; /* Add for sticky footer */
+  /* roughly the height of .navbar (modify as needed) */
+  padding-top: 70px;
+  /* for smooth in‑page anchors */
+  scroll-padding-top: 70px;
 }
 
 main {
@@ -103,7 +113,7 @@ main {
 /* Hero Section */
 .hero {
   position: relative;
-  background: url("assets/img/background.jpg") no-repeat center center;
+  background: url("/assets/img/background.jpg") no-repeat center center;
   background-size: cover;
   height: 100vh;
   padding-top: 56px; /* To account for the fixed navbar */
@@ -192,7 +202,6 @@ main {
   color: #333333;
 }
 
-/* Cards: using default white background for contrast */
 .card {
   background-color: #fff;
   border: 1px solid #dee2e6;
@@ -201,18 +210,32 @@ main {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Default to top-aligned content */
-  align-items: flex-start; /* Default to left-aligned content */
-  text-align: left; /* Default to left-aligned text */
+  justify-content: space-between; /* Changed justify-content */
+  align-items: stretch;
+  text-align: left;
 }
 
 .card .card-body {
   display: flex;
   flex-direction: column;
+  min-height: 0;
+  flex-grow: 1;
 }
 
-.card .card-body > *:last-child {
-  margin-top: auto;
+.card .card-body > div:first-child {
+  /* Icon and Title */
+  /* No flex-grow here */
+}
+
+.card .card-body > .card-text {
+  /* Paragraph */
+  flex-grow: 1;
+}
+
+.card > .mt-3 {
+  /* Style the badge container that is now a direct child of .card */
+  /* margin-top: auto; Remove this */
+  /* align-self: flex-end; Remove this */
 }
 
 /* Adjust icon colors in service cards to match primary blue */
@@ -222,7 +245,8 @@ main {
 }
 
 .badge {
-  background-color: #6ca0dc !important;
+  background-color: #afd4ff !important;
+  font-size: 0.8rem !important;
 }
 
 /* Contact form input styles remain untouched for clarity */

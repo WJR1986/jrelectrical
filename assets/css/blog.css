@@ -11,3 +11,6 @@
     max-width: 300px;
   }
 }
+.fixed-top + .content-wrapper {
+  margin-top: 70px !important;
+}

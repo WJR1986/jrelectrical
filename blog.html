@@ -15,18 +15,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="/assets/css/custom_buttons.css"> -->
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/blog.css">
     <meta name="description" content="Read informative articles about homecare services from Alnwick Care.">
     <meta name="keywords" content="homecare, care services, Alnwick, blog, articles">
 </head>
 
-<body style="background-color: #F8F9FA; font-family: sans-serif;">
+<body id="blog-page" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70"
+    style="background-color: #F8F9FA; font-family: sans-serif;">
 
+    <!-- Navigation -->
     <nav id="navbar" class="navbar navbar-expand-lg fixed-top"
         style="background-color: rgb(108, 160, 220, 0.9); box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.075);">
         <div class="container">
-            <a class="navbar-brand pt-sans-narrow-regular text-dark" href="index.html">Alnwick Care</a>
+            <a class="navbar-brand pt-sans-narrow-regular text-dark" href="index.html#hero">Alnwick Care</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +37,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="/">Home</a>
+                        <a class="nav-link text-dark" href="index.html#hero">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" href="index.html#about">About</a>
@@ -47,46 +49,50 @@
                         <a class="nav-link text-dark" href="index.html#portfolio">Testimonials</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-dark" href="blog.html">Blog</a>
+                        <a class="nav-link text-dark" href="index.html#contact">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="index.html#contact">Contact</a>
+                        <a class="nav-link active text-dark" href="#">Blog</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <main class="container mt-5 pt-5">
+    <main class="container pt-5">
         <h1>Alnwick Care Blog</h1>
         <p class="lead">Welcome to our blog where we share insights and information about homecare.</p>
 
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-md-8">
                 <h2>Latest Articles</h2>
                 <div class="row row-cols-1 row-cols-md-2 g-4" id="blog-posts-container">
                     <div class="col" data-category="General Homecare">
                         <div class="card h-100">
-                            <img src="assets/img/blog-placeholder.jpg" class="card-img-top" alt="Blog Post 1 Image">
+                            <img src="assets/img/blog-placeholder.jpg" class="card-img-top img-fluid"
+                                alt="Blog Post 1 Image">
                             <div class="card-body d-flex flex-column justify-content-between">
                                 <h5 class="card-title"><a href="/blog-posts/blog1.html"
                                         class="text-decoration-none text-dark">Your First Blog Article Title</a></h5>
                                 <p class="card-text text-muted">Published on [Date]</p>
                                 <p class="card-text">A brief summary or excerpt of your first blog article...</p>
-                                <a href="/blog-posts/blog1.html" class="btn btn-primary btn-sm w-50">Read More</a>
+                                <a href="/blog-posts/blog1.html"
+                                    class="btn btn-primary btn-sm w-50 mx-auto d-block">Read More</a>
 
                             </div>
                         </div>
                     </div>
                     <div class="col" data-category="Tips for Families">
                         <div class="card h-100">
-                            <img src="assets/img/blog-placeholder-2.jpg" class="card-img-top" alt="Blog Post 2 Image">
+                            <img src="assets/img/blog-placeholder.jpg" class="card-img-top img-fluid"
+                                alt="Blog Post 1 Image">
                             <div class="card-body d-flex flex-column justify-content-between">
                                 <h5 class="card-title"><a href="/blog-posts/blog2.html"
                                         class="text-decoration-none text-dark">Another Great Post Title</a></h5>
                                 <p class="card-text text-muted">Published on [Another Date]</p>
                                 <p class="card-text">A short preview of your second blog article goes here...</p>
-                                <a href="/blog-posts/blog2.html" class="btn btn-primary btn-sm w-50">Read
+                                <a href="/blog-posts/blog2.html"
+                                    class="btn btn-primary btn-sm w-50 mx-auto d-block">Read
                                     More</a>
                             </div>
                         </div>
@@ -95,11 +101,14 @@
             </div>
             <div class="col-md-4 text-lg-end text-sm-center text-center pt-3 pt-lg-0">
                 <h2>Categories</h2>
-                <ul class="list-unstyled" id="blog-categories">
+                <ul class="list-unstyled pb-0 mb-0" id="blog-categories">
                     <li><a href="#" data-category="all" class="text-lg-end">All Categories</a></li>
                     <li><a href="#" data-category="General Homecare" class="text-lg-end">General Homecare</a></li>
                     <li><a href="#" data-category="Tips for Families" class="text-lg-end">Tips for Families</a></li>
-                    <li><a href="#" data-category="Our Services" class="text-lg-end">Our Services</a></li>
+
+                </ul>
+                <ul class="list-unstyled pt-0 mt-0">
+                    <li><a href="services.html" data-category="Our Services" class="text-lg-end">Our Services</a></li>
                 </ul>
             </div>
         </div>
