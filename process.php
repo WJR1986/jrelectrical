@@ -35,8 +35,8 @@ if ($result->success) {
     $phone = sanitize_input($_POST['phone']);
     $message = sanitize_input($_POST['message']);
 
-    // Email configuration
-    $to = 'willrichardson182@gmail.com';
+    // Email configurationj.robinsonelectrician93@gmail.com
+    $to = 'willrichardson182@gmail.com, j.robinsonelectrician93@gmail.com'; 
     $subject = 'New Message Received for Alnwick Care';
     
     $headers = "From: Alnwick Care <william@alnwickcare.co.uk>\r\n";
