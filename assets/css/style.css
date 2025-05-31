@@ -61,7 +61,7 @@ main {
 /* Hero Section */
 .hero {
   position: relative;
-  background: url("../../assets/img/bg1.png") no-repeat center center; /* Desktop image */
+  background: url("../../assets/img/bg1.webp") no-repeat center center; /* Desktop image */
   background-size: cover;
 
   min-height: calc(100vh - 56px); /* full viewport minus navbar */
