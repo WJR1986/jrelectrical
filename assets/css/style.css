@@ -76,7 +76,7 @@ main {
 /* For screens smaller than a certain breakpoint */
 @media (max-width: 768px) {
   .hero {
-    background: url("../../assets/img/bg5-mobile.png") no-repeat center center; /* Mobile-specific image */
+    background: url("../../assets/img/bg5-mobile.webp") no-repeat center center; /* Mobile-specific image */
     background-size: cover; /* Still cover to fill the space */
     
   }
