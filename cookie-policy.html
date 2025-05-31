@@ -341,7 +341,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Load saved preferences
-            const prefs = JSON.parse(localStorage.getItem('cookieConsent') || '{}';
+            const prefs = JSON.parse(localStorage.getItem('cookieConsent') || '{}');
             const analyticsToggle = document.getElementById('toggle-analytics');
             
             if (prefs.analytics !== undefined) {
@@ -425,7 +425,7 @@
         }
 
         // Load analytics immediately if previously consented
-        const prefs = JSON.parse(localStorage.getItem('cookieConsent') || '{}';
+        const prefs = JSON.parse(localStorage.getItem('cookieConsent') || '{}');
         if (prefs.analytics) {
             loadAnalytics();
         }
