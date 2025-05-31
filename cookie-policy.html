@@ -4,26 +4,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cookie Policy | Alnwick Care</title>
+    <title>Cookie Policy | J. Robinson Electrical Contractor</title>
     <meta name="description"
-        content="Cookie Policy for Alnwick Care detailing cookie usage, purposes, durations, and user preferences.">
+        content="Cookie Policy for J. Robinson Electrical detailing cookie usage, purposes, durations, and user preferences.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-            <!-- favicons -->
-            <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-            <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-            <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-            <link rel="manifest" href="/site.webmanifest">
-            <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"> 
-            <meta name="msapplication-TileColor" content="#da532c"> 
-            <meta name="theme-color" content="#ffffff"> 
-            <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"> 
+    <meta name="msapplication-TileColor" content="#da532c"> 
+    <meta name="theme-color" content="#ffffff"> 
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <style>
+        :root {
+            --primary-color: #6CA0DC;
+            --secondary-color: #5a86c4;
+            --accent-color: #4a6ea9;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar-brand i {
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: none;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        
+        .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 10px 10px 0 0 !important;
+            font-weight: 600;
+            padding: 1rem 1.5rem;
+        }
+        
+        h1, h2, h3 {
+            color: var(--accent-color);
+        }
+        
+        .table {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .table thead {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .table th {
+            font-weight: 600;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border: none;
+            padding: 0.6rem 1.5rem;
+            font-weight: 600;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .cookie-icon {
+            background-color: var(--primary-color);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 1.8rem;
+        }
+        
+        .cookie-category {
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .cookie-toggle {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .table-responsive {
+                overflow-x: auto;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand text-white" href="index.html">Alnwick Care</a>
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-bolt"></i>
+                J. Robinson Electrical
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -37,108 +177,260 @@
         </div>
     </nav>
 
-    <main class="container my-5">
-        <h1 class="mb-3">Cookie Policy</h1>
-        <p><strong>Last updated:</strong> 20 April 2025</p>
-
-        <section class="mt-4">
-            <h2>What Are Cookies?</h2>
-            <p>Cookies are small text files placed on your device when you visit a website. They help the site remember
-                your actions
-                and preferences over time.</p>
-        </section>
-
-        <section class="mt-4">
-            <h2>Why We Use Cookies</h2>
-            <p>We use cookies to:</p>
-            <ul>
-                <li>Ensure site security and prevent fraud (necessary cookies).</li>
-                <li>Analyze site usage and improve performance (analytics cookies).</li>
-            </ul>
-        </section>
-
-        <section class="mt-4">
-            <h2>Cookie Categories & Details</h2>
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Provider</th>
-                        <th>Purpose</th>
-                        <th>Duration</th>
-                        <th>Category</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>g-recaptcha</td>
-                        <td>google.com</td>
-                        <td>reCAPTCHA security verification</td>
-                        <td>Session</td>
-                        <td>Necessary</td>
-                    </tr>
-                    <tr>
-                        <td>_ga, _gid</td>
-                        <td>google-analytics.com</td>
-                        <td>Distinguish users and sessions</td>
-                        <td>2 years, 24 hours</td>
-                        <td>Analytics</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section class="mt-4">
-            <h2>Manage Your Cookie Preferences</h2>
-            <div class="form-check form-switch mb-3">
-                <input class="form-check-input" type="checkbox" id="toggle-analytics">
-                <label class="form-check-label" for="toggle-analytics">Enable Analytics Cookies (_ga, _gid)</label>
+    <div class="hero-section">
+        <div class="container text-center">
+            <div class="cookie-icon">
+                <i class="fas fa-cookie-bite"></i>
             </div>
-            <button id="save-preferences" class="btn btn-primary">Save Preferences</button>
-        </section>
+            <h1 class="mb-3">Cookie Policy</h1>
+            <p class="lead">How we use cookies to enhance your experience on our website</p>
+        </div>
+    </div>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card mb-4">
+                    <div class="card-header">Introduction</div>
+                    <div class="card-body">
+                        <p><strong>Last updated:</strong> 20 April 2025</p>
+                        <p>This Cookie Policy explains how J. Robinson Electrical ("we", "us", or "our") uses cookies and similar technologies on our website. By using our website, you consent to the use of cookies as described in this policy.</p>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-header">What Are Cookies?</div>
+                    <div class="card-body">
+                        <p>Cookies are small text files placed on your device when you visit a website. They help the site remember your actions and preferences over time.</p>
+                        <p>We use cookies for several important purposes:</p>
+                        <ul>
+                            <li>To ensure our website functions properly</li>
+                            <li>To enhance security and prevent fraud</li>
+                            <li>To understand how visitors use our site</li>
+                            <li>To improve user experience</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-header">Types of Cookies We Use</div>
+                    <div class="card-body">
+                        <div class="cookie-category">
+                            <h3><i class="fas fa-shield-alt me-2"></i> Essential Cookies</h3>
+                            <p>These cookies are necessary for the website to function properly. They enable core functionality such as security and accessibility.</p>
+                        </div>
+                        
+                        <div class="cookie-category">
+                            <h3><i class="fas fa-chart-line me-2"></i> Analytics Cookies</h3>
+                            <p>These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously.</p>
+                        </div>
+                        
+                        <div class="cookie-category">
+                            <h3><i class="fas fa-cogs me-2"></i> Preference Cookies</h3>
+                            <p>These cookies remember choices you make to improve your experience, such as your cookie preferences.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-header">Detailed Cookie Information</div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Provider</th>
+                                        <th>Purpose</th>
+                                        <th>Duration</th>
+                                        <th>Category</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>g-recaptcha</td>
+                                        <td>google.com</td>
+                                        <td>reCAPTCHA security verification</td>
+                                        <td>Session</td>
+                                        <td>Essential</td>
+                                    </tr>
+                                    <tr>
+                                        <td>_ga, _gid</td>
+                                        <td>google-analytics.com</td>
+                                        <td>Distinguish users and sessions</td>
+                                        <td>2 years, 24 hours</td>
+                                        <td>Analytics</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cookieConsent</td>
+                                        <td>jrobinsonelectrical.co.uk</td>
+                                        <td>Remember your cookie preferences</td>
+                                        <td>1 year</td>
+                                        <td>Preference</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-header">Manage Your Cookie Preferences</div>
+                    <div class="card-body">
+                        <div class="cookie-toggle">
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="toggle-analytics" checked>
+                                <label class="form-check-label" for="toggle-analytics">
+                                    <strong>Analytics Cookies</strong> - Help us understand how visitors use our site
+                                </label>
+                            </div>
+                            
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle me-2"></i> Essential cookies cannot be disabled as they are necessary for the website to function properly.
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button id="accept-all" class="btn btn-outline-primary">Accept All Cookies</button>
+                            <button id="save-preferences" class="btn btn-primary">Save Preferences</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Contact Us</div>
+                    <div class="card-body">
+                        <p>If you have any questions about our Cookie Policy, please contact us:</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-envelope me-2"></i> info@jrobinsonelectrical.co.uk</li>
+                            <li><i class="fas fa-phone me-2"></i> 01665 123 456</li>
+                            <li><i class="fas fa-map-marker-alt me-2"></i> Alnwick, Northumberland, UK</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer class="bg-light text-center py-4">
+    <footer>
         <div class="container">
-            <p class="mb-0">&copy; 2025 Alnwick Care. All rights reserved.</p>
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h5>J. Robinson Electrical</h5>
+                    <p>Professional electrical services in Northumberland</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light">Home</a></li>
+                        <li><a href="services.html" class="text-light">Services</a></li>
+                        <li><a href="about.html" class="text-light">About Us</a></li>
+                        <li><a href="contact.html" class="text-light">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 J. Robinson Electrical Contractor. All rights reserved.</p>
+                <p class="mb-0"><a href="privacy-policy.html" class="text-light">Privacy Policy</a> | <a href="cookie-policy.html" class="text-light">Cookie Policy</a> | <a href="terms.html" class="text-light">Terms of Service</a></p>
+            </div>
         </div>
     </footer>
 
     <!-- Consent & Preference Script -->
     <script>
-        // Load saved preferences
-        const prefs = JSON.parse(localStorage.getItem('cookieConsent') || '{}');
-        document.getElementById('toggle-analytics').checked = prefs.analytics === true;
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load saved preferences
+            const prefs = JSON.parse(localStorage.getItem('cookieConsent') || '{}';
+            const analyticsToggle = document.getElementById('toggle-analytics');
+            
+            if (prefs.analytics !== undefined) {
+                analyticsToggle.checked = prefs.analytics;
+            } else {
+                // Default to enabled if no preference set
+                analyticsToggle.checked = true;
+            }
 
-        // Save preferences
-        document.getElementById('save-preferences').onclick = () => {
-            const analytics = document.getElementById('toggle-analytics').checked;
-            localStorage.setItem('cookieConsent', JSON.stringify({ decision: true, analytics }));
-            if (analytics) loadAnalytics(); else location.reload();
-            alert('Your cookie preferences have been saved.');
-        };
+            // Save preferences
+            document.getElementById('save-preferences').addEventListener('click', () => {
+                const analytics = analyticsToggle.checked;
+                localStorage.setItem('cookieConsent', JSON.stringify({ 
+                    decision: true, 
+                    analytics,
+                    timestamp: new Date().toISOString()
+                }));
+                
+                if (analytics) {
+                    loadAnalytics();
+                } else {
+                    // Clear analytics cookies if disabled
+                    document.cookie = '_ga=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+                    document.cookie = '_gid=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+                }
+                
+                showConfirmation('Your cookie preferences have been saved successfully.');
+            });
+            
+            // Accept all cookies
+            document.getElementById('accept-all').addEventListener('click', () => {
+                analyticsToggle.checked = true;
+                localStorage.setItem('cookieConsent', JSON.stringify({ 
+                    decision: true, 
+                    analytics: true,
+                    timestamp: new Date().toISOString()
+                }));
+                loadAnalytics();
+                showConfirmation('All cookies have been accepted.');
+            });
+            
+            // Show confirmation message
+            function showConfirmation(message) {
+                const alert = document.createElement('div');
+                alert.className = 'alert alert-success alert-dismissible fade show position-fixed bottom-0 end-0 m-3';
+                alert.style.zIndex = '9999';
+                alert.innerHTML = `
+                    ${message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                `;
+                document.body.appendChild(alert);
+                
+                // Auto-remove after 3 seconds
+                setTimeout(() => {
+                    alert.classList.remove('show');
+                    setTimeout(() => document.body.removeChild(alert), 150);
+                }, 3000);
+            }
+        });
 
         // Analytics loader
         function loadAnalytics() {
-            (function (i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-            ga('create', 'UA-XXXXXXX-X', 'auto'); ga('send', 'pageview');
+            if (typeof ga === 'undefined') {
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+                
+                // Replace with your actual Google Analytics ID
+                ga('create', 'UA-XXXXXXX-X', 'auto');
+                ga('send', 'pageview');
+            }
         }
 
         // Always load reCAPTCHA for security
-        const rc = document.createElement('script');
-        rc.src = 'https://www.google.com/recaptcha/api.js'; rc.async = true;
-        document.head.appendChild(rc);
+        if (!document.querySelector('script[src*="recaptcha"]')) {
+            const rc = document.createElement('script');
+            rc.src = 'https://www.google.com/recaptcha/api.js';
+            rc.async = true;
+            document.head.appendChild(rc);
+        }
 
         // Load analytics immediately if previously consented
-        if (prefs.analytics) loadAnalytics();
+        const prefs = JSON.parse(localStorage.getItem('cookieConsent') || '{}';
+        if (prefs.analytics) {
+            loadAnalytics();
+        }
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

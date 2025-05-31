@@ -6,4 +6,4 @@ Allow: /private/public/
 User-agent: Googlebot-Image
 Disallow: /images/private/
 
-Sitemap: https://www.alnwickcare.co.uk/sitemap.xml
+Sitemap: https://www.jrobinsonelectrical.co.uk/sitemap.xml
