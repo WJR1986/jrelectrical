@@ -1,0 +1,376 @@
+/* style.css */
+/*
+[Colour Scheme]
+
+Logo BG colour
+#6ca0dc
+rgb(108 160 220)
+
+Logo Font colour 1
+#003060
+rgb(0 48 96)
+
+Logo Font colour 2
+#afddff
+rgb(175 221 255)
+*/
+html {
+  /* always leave room for the vertical scrollbar on the right */
+  overflow-y: scroll;
+  /* reserve that gutter so centering never jumps */
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+}
+
+/* Global Fonts and Colors */
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f8f9fa; /* off-white background */
+  color: #333333; /* Dark charcoal for general text */
+  display: flex; /* Add for sticky footer */
+  flex-direction: column; /* Add for sticky footer */
+  min-height: 100vh; /* Add for sticky footer */
+  /* roughly the height of .navbar (modify as needed) */
+  padding-top: 70px;
+  /* for smooth in‑page anchors */
+  scroll-padding-top: 70px;
+}
+
+main {
+  flex-grow: 1; /* Add for sticky footer */
+}
+
+/* Divider */
+.b-example-divider {
+  width: 100%;
+  height: 2rem;
+  background: linear-gradient(to bottom, white, lightgray);
+  border: solid lightgray;
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+/* nav */
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Or 'center', 'flex-end', etc. */
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 2rem !important;
+  color: #e8ebf8 !important;
+  font-weight: 200;
+  display: inline-block; /* Important for transform to work correctly */
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+.nav-link,
+.active {
+  color: #e8ebf8 !important;
+  position: relative; /* Needed for absolute positioning of the pseudo-element */
+  overflow: hidden; /* To prevent potential overflow of the underline */
+  padding-bottom: 0.2em; /* Add a little padding below the text for the underline */
+  transition: color 0.3s ease-in-out; /* Keep the color transition */
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Set width to 100% initially */
+  height: 1px;
+  background-color: transparent; /* Make it transparent initially */
+  transition: background-color 0.3s ease-in-out; /* Transition the color */
+}
+
+.nav-link:hover,
+.active {
+  text-decoration: underline;
+  text-decoration-color: #003060;
+}
+
+.nav-link:hover::after {
+  background-color: #003060; /* Change color on hover */
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url("../../assets/img/background.webp") no-repeat center center;
+  background-size: cover;
+
+  /* instead of `height:100vh;`… */
+  min-height: calc(100vh - 56px); /* full viewport minus navbar */
+  padding-top: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #f8f9fa; /* Use off-white if desired for readability over the overlay */
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+.hero-logo {
+  margin-bottom: 1rem;
+  max-width: 400px; /* or whatever */
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.9;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.hero-title {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+}
+
+.hero-button {
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+.hero-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #f8f9fa; /* Off-white */
+}
+
+.hero-text {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #f8f9fa; /* Off-white */
+}
+
+/* Primary Button styled based on palette */
+.btn-primary {
+  background-color: #6ca0dc !important; /* Calming Blue */
+  border-color: #6ca0dc !important;
+  transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #4db6ac !important; /* Warm Teal on hover */
+  border-color: #4db6ac !important;
+}
+
+.text-primary {
+  color: #6ca0dc !important;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333333;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Changed justify-content */
+  align-items: stretch;
+  text-align: left;
+}
+
+.card .card-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex-grow: 1;
+}
+
+.card .card-body > div:first-child {
+  /* Icon and Title */
+  /* No flex-grow here */
+}
+
+.card .card-body > .card-text {
+  /* Paragraph */
+  flex-grow: 1;
+}
+
+.card > .mt-3 {
+  /* Style the badge container that is now a direct child of .card */
+  /* margin-top: auto; Remove this */
+  /* align-self: flex-end; Remove this */
+}
+
+/* Adjust icon colors in service cards to match primary blue */
+.service-icon,
+.fas {
+  color: #6ca0dc;
+}
+
+.badge {
+  background-color: #afd4ff !important;
+  font-size: 0.8rem !important;
+}
+
+/* Contact form input styles remain untouched for clarity */
+.form-control {
+  border-radius: 4px;
+}
+
+@media (max-width: 767.98px) {
+  #contact .fa-lg {
+    font-size: 1.25rem;
+  }
+}
+
+/* Custom styles for Contact Information List */
+#contact .list-group-item {
+  background-color: #f8f9fa;
+  display: flex; /* Enable flexbox */
+  align-items: center; /* Vertically center items */
+  border: none; /* Remove borders */
+  padding-left: 0; /* Optional: Remove default left padding */
+  padding-right: 0; /* Optional: Remove default right padding */
+  margin-bottom: 0.5rem; /* Add space between items */
+}
+
+#contact .list-group-item:last-child {
+  margin-bottom: 0; /* Remove margin from the last item */
+}
+
+/* Ensure consistent spacing within the list item */
+#contact .list-group-item i.fas {
+  /* Icon margin is already set by Bootstrap me-3, but can adjust here if needed */
+  /* margin-right: 0.75rem; */
+}
+
+#contact .list-group-item strong {
+  /* Label margin is already set by Bootstrap me-2, but can adjust here if needed */
+  /* margin-right: 0.5rem; */
+  flex-shrink: 0; /* Prevent the label text from shrinking if content is long */
+}
+
+/* Optional: Adjust padding for the list group container if you removed list-group-flush */
+/* #contact .list-group {
+   padding: 1rem;
+} */
+/*************************/
+/* ABOUT SECTION STYLES */
+/***********************/
+.image-overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 70%; /* 70% of the image */
+  max-width: 80%; /* Never bigger than image */
+
+  background-color: rgba(108, 160, 220, 0.9);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+.motivational-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .motivational-text {
+    font-size: 1.2rem;
+  }
+}
+
+/* Ensure the image stays responsive */
+.responsive-image {
+  width: 100%;
+  height: auto;
+  display: block; /* Prevent extra space below the image */
+}
+
+/* For Medium Screens (tablets, small desktops) */
+@media (min-width: 768px) {
+  .responsive-image {
+    max-width: 75%; /* Takes up 75% of the parent container */
+  }
+}
+
+/* For Larger Screens (desktops, large desktops) */
+@media (min-width: 992px) {
+  .responsive-image {
+    max-width: 70%; /* Takes up 70% of the parent container on large screens */
+  }
+}
+
+/* For Extra Large Screens (larger desktops) */
+@media (min-width: 1200px) {
+  .responsive-image {
+    max-width: 75%; /* On very large screens, limits to 50% of the parent container */
+  }
+}
+
+/* Cards: center content only on smaller screens (max-width: 767px) */
+@media (max-width: 767px) {
+  .card {
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Ensure text is centered */
+  }
+
+  .card i {
+    display: block; /* Make icon a block-level element */
+    margin-bottom: 10px; /* Add spacing between icon and text */
+    text-align: center; /* Center the icon */
+  }
+
+  .card-title,
+  .card-text {
+    margin: 0 auto; /* Ensure titles and text are centered */
+    max-width: 90%; /* Limit the width on small screens */
+  }
+}

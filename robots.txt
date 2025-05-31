@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Allow: /private/public/
+
+User-agent: Googlebot-Image
+Disallow: /images/private/
+
+Sitemap: https://www.alnwickcare.co.uk/sitemap.xml

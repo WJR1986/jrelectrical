@@ -1,0 +1,46 @@
+# --- BEGIN Cache-Control Directives ---
+<IfModule mod_headers.c>
+    <filesMatch "\.(css|js)$">
+        Header set Cache-Control "max-age=604800, public" # Cache CSS and JS for 7 days
+    </filesMatch>
+
+    <filesMatch "\.(png|jpg|jpeg|gif|webp|svg|ico)$">
+        Header set Cache-Control "max-age=2592000, public" # Cache images for 30 days
+    </filesMatch>
+
+    <filesMatch "\.(eot|ttf|otf|woff|woff2)$">
+        Header set Cache-Control "max-age=2592000, public" # Cache fonts for 30 days
+    </filesMatch>
+
+    # Optional: Cache HTML - Be cautious with this, set a short time
+    # <filesMatch "\.(html|htm)$">
+    #     Header set Cache-Control "max-age=600, public" # Cache HTML for 10 minutes
+    # </filesMatch>
+</IfModule>
+# --- END Cache-Control Directives ---
+
+# --- BEGIN Expires Headers Directives ---
+# Requires mod_expires to be enabled on your server (usually enabled by default on Hostinger)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 hour" # Default cache for 1 hour
+
+    ExpiresByType text/css "access plus 7 days"
+    ExpiresByType application/javascript "access plus 7 days"
+    ExpiresByType application/x-javascript "access plus 7 days"
+
+    ExpiresByType image/png "access plus 30 days"
+    ExpiresByType image/jpg "access plus 30 days"
+    ExpiresByType image/jpeg "access plus 30 days"
+    ExpiresByType image/gif "access plus 30 days"
+    ExpiresByType image/webp "access plus 30 days"
+    ExpiresByType image/svg+xml "access plus 30 days"
+    ExpiresByType image/x-icon "access plus 30 days"
+
+    ExpiresByType application/font-woff "access plus 30 days"
+    ExpiresByType application/font-woff2 "access plus 30 days"
+    ExpiresByType application/vnd.ms-fontobject "access plus 30 days"
+    ExpiresByType application/x-font-ttf "access plus 30 days"
+    ExpiresByType font/opentype "access plus 30 days"
+</IfModule>
+# --- END Expires Headers Directives ---

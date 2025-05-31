@@ -1,0 +1,26 @@
+# .gitignore
+
+# Ignore configuration files containing secrets
+/config.php
+
+# If you use environment files
+# ignore secrets & deps
+.env
+simple-dotenv.php         # if you use the custom loader
+vendor/                   # if you install phpdotenv via Composer
+
+
+# Ignore Composer dependencies\ n/vendor/
+
+# Ignore Node.js dependencies
+/node_modules/
+
+# Ignore logs
+*.log
+
+# macOS Finder files
+.DS_Store
+
+# Windows thumbnails
+Thumbs.db
+

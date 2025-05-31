@@ -1,16 +1,22 @@
-/* For Larger Screens (desktops, large desktops) */
-@media (min-width: 992px) {
-  .blog-image {
-    max-width: 300px;
-  }
+/* Blog Sidebar floating */
+.blog-sidebar {
+  /* Default mobile-first style */
+  position: static;
+  width: 100%;
+  margin-top: 2rem;
 }
 
-/* For Extra Large Screens (larger desktops) */
-@media (min-width: 1200px) {
-  .blog-image {
-    max-width: 300px;
+/* Desktop screens: float top right */
+@media (min-width: 992px) {
+  .blog-sidebar {
+    position: fixed;
+    top: 100px;
+    right: 50px;
+    width: 250px;
   }
-}
-.fixed-top + .content-wrapper {
-  margin-top: 70px !important;
+
+  /* Also adjust main content to make space */
+  .blog-main {
+    margin-right: 300px;
+  }
 }
